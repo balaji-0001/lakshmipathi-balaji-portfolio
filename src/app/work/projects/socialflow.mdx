@@ -1,0 +1,52 @@
+---
+title: "SocialFlow"
+subtitle: "Multi-Tenant Social Media Management Platform"
+publishedAt: "2026-08-01"
+order: 3
+summary: "A multi-tenant social media management platform that allows users to connect social accounts, manage workflows, and automate publishing."
+role: "Full-Stack & Backend Engineer"
+contribution: "Built high-concurrency Express 5 REST APIs with Drizzle ORM and MySQL 8, integrated OAuth 2.0 across Facebook, LinkedIn, X, and YouTube, secured credentials with AES-256-GCM encryption, implemented background scheduled publishing workers, and wrote integration tests with Vitest and Supertest."
+stack:
+  - "TypeScript"
+  - "Node.js"
+  - "Express 5"
+  - "React"
+  - "MySQL 8"
+  - "Drizzle ORM"
+  - "OAuth 2.0"
+highlights:
+  - "Multi-tenant team workspaces with role governance and content approval workflows"
+  - "Official OAuth 2.0 integrations for Facebook, LinkedIn, X, and YouTube from a unified console"
+  - "AES-256-GCM token encryption at rest and isolated background job workers for scheduled publishing"
+  - "Automated integration test coverage using Vitest and Supertest against a live MySQL 8 database"
+images:
+  - "/images/projects/socialflow-arch.png"
+tag: "Multi-Tenant · OAuth 2.0 · Security"
+github: "https://github.com/balaji-0001/SOCIALFLOW"
+link: "https://socialflow-manager-alpha.vercel.app"
+hasLiveDemo: true
+---
+
+## Architecture Overview
+
+SocialFlow is a multi-tenant social media publishing and workspace governance platform written end-to-end in TypeScript. Built on Node.js, Express 5, Drizzle ORM, and MySQL 8 with a React frontend, the system unifies multi-platform account synchronization, encrypted credential management, and background scheduled publishing.
+
+## Multi-Tenant Workspaces & Approval Governance
+
+Organizations operate inside isolated tenant boundaries so teams can collaborate without cross-tenant data leakage:
+
+- **Team Workspaces**: Tenant-scoped channels, members, and connected platform accounts.
+- **Approval Workflows**: Structured draft, review, and approval stages before content reaches external publishing queues.
+- **High-Concurrency Express 5 APIs**: Type-safe request validation and Drizzle ORM query execution backed by MySQL 8.
+
+## OAuth 2.0 Integrations & AES-256-GCM Security
+
+Connecting external social providers requires careful lifecycle and secret protection:
+
+- **Official OAuth 2.0 Flows**: Supports connecting **Facebook**, **LinkedIn**, **X**, and **YouTube** accounts into a single management console.
+- **AES-256-GCM Token Encryption**: Access and refresh tokens are encrypted at rest with authenticated encryption (`AES-256-GCM`) before persistence in MySQL 8.
+- **Background Job Workers**: Dedicated asynchronous workers dequeue approved posts on schedule, decrypting credentials only in memory for outbound dispatch.
+
+## Automated Integration Testing
+
+Backend endpoints and multi-tenant workflows are verified using **Vitest** and **Supertest** executing directly against a live **MySQL 8** database instance, validating schema integrity, auth boundaries, and publishing workflows end to end.

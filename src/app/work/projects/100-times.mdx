@@ -1,0 +1,56 @@
+---
+title: "100 TIMES"
+subtitle: "Event Discovery & Autonomous AI Acquisition Platform"
+publishedAt: "2026-10-01"
+order: 1
+summary: "A full-stack event intelligence and marketplace platform built to automate event discovery, verification, outreach, and attendee acquisition."
+role: "Full-Stack & AI Systems Engineer"
+contribution: "Architected the FastAPI + PostgreSQL backend, orchestrated 3 autonomous LangGraph agents with human-in-the-loop review, built the 6-stage ingestion and qualification pipeline, and delivered role-based attendee, organizer, and admin dashboards in React 19."
+stack:
+  - "Python"
+  - "FastAPI"
+  - "LangGraph"
+  - "React 19"
+  - "SQLAlchemy 2.0"
+  - "PostgreSQL"
+highlights:
+  - "Full-stack event marketplace with attendee, organizer, and admin operations dashboards"
+  - "Orchestrated 3 autonomous LangGraph agents for grounded web discovery, B2B outreach with HITL review, and attendee acquisition"
+  - "Implemented a 6-stage data processing pipeline covering intent extraction, qualification, and policy enforcement"
+  - "Integrated multiple external API connectors with deterministic link attribution"
+images:
+  - "/images/projects/100-times-arch.png"
+tag: "AI Agents · Full-Stack"
+github: "https://github.com/balaji-0001/100-Times-Event-Platform"
+link: ""
+hasLiveDemo: true
+---
+
+## Architecture Overview
+
+100 TIMES is a full-stack event intelligence and marketplace platform designed to turn fragmented event sourcing and manual outreach into an auditable, semi-autonomous pipeline. The system pairs a React 19 multi-role frontend with a stateless FastAPI API layer, SQLAlchemy 2.0 persistence on PostgreSQL, and a stateful LangGraph agent orchestration runtime.
+
+## Autonomous AI Agent Workflow
+
+Rather than wrapping a single prompt around scraping scripts, the platform separates responsibilities across three specialized LangGraph agents operating over explicit state transitions:
+
+- **Discovery Agent**: Executes grounded web data collection across multiple API connectors, normalizing raw event metadata, venue details, and schedule attributes into typed records.
+- **B2B Outreach Agent with Human-in-the-Loop (HITL)**: Synthesizes personalized organizer outreach grounded in discovered event context while pausing at an approval checkpoint for human review before dispatch.
+- **Attendee Acquisition Agent**: Matches qualified events against audience intent signals and tracks conversion attribution across outbound links.
+
+## 6-Stage Data Processing Pipeline
+
+Incoming records move through a deterministic 6-stage processing pipeline before reaching the marketplace or triggering outreach:
+
+1. **Multi-Connector Ingestion**: Collects candidate event listings across external API connectors.
+2. **Normalization & Deduplication**: Maps heterogeneous payloads into canonical SQLAlchemy 2.0 / PostgreSQL entities.
+3. **Intent Extraction**: Identifies event categories, audience fit, and organizer context.
+4. **Qualification Scoring**: Filters candidates against quality and completeness rules.
+5. **Policy Enforcement**: Validates link attribution, compliance constraints, and content guidelines.
+6. **Marketplace & Dashboard Publishing**: Surfaces verified records to attendee, organizer, and admin operations consoles.
+
+## Role-Based Dashboards & Operations
+
+- **Attendee Dashboard**: Event discovery, search, and attributed registration journeys.
+- **Organizer Console**: Event submission, listing verification visibility, and outreach collaboration.
+- **Admin Operations Console**: End-to-end pipeline oversight, human-in-the-loop review queues, and link attribution monitoring.

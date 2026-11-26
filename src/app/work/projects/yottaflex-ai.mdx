@@ -1,0 +1,55 @@
+---
+title: "YottaFlex AI"
+subtitle: "Enterprise Workforce Intelligence & Analytics Platform"
+publishedAt: "2026-09-01"
+order: 2
+summary: "An enterprise decision-support and analytics platform featuring modular backend services, structured database architecture, granular security, and automated testing."
+role: "Backend & Systems Architect"
+contribution: "Designed the normalized 17-table PostgreSQL/SQLAlchemy 2.0 data model, engineered modular FastAPI REST services, implemented granular RBAC across 7 roles and 18 permissions, and authored a 113-test automated Pytest suite achieving a 100% pass rate."
+stack:
+  - "Python 3.12"
+  - "FastAPI"
+  - "SQLAlchemy 2.0"
+  - "React 19"
+  - "TypeScript"
+  - "Pytest"
+  - "Docker"
+highlights:
+  - "Architected a normalized 17-table relational database schema in SQLAlchemy 2.0"
+  - "Implemented granular Role-Based Access Control (RBAC) supporting 7 distinct roles and 18 fine-grained permissions"
+  - "Developed modular FastAPI REST services with strict typed contracts and containerized Docker deployment"
+  - "Authored 113 automated unit and integration tests via Pytest with a 100% pass rate"
+images:
+  - "/images/projects/yottaflex-arch.png"
+tag: "Backend · Security · Testing"
+github: "https://github.com/balaji-0001/yottaflex-ai"
+link: ""
+hasLiveDemo: false
+---
+
+## Architecture Overview
+
+YottaFlex AI is an enterprise workforce intelligence and decision-support platform built around strict relational modeling, defense-in-depth access control, and automated regression verification. The backend runs on Python 3.12 and FastAPI, paired with a React 19 + TypeScript client and containerized through Docker.
+
+## Normalized 17-Table Database Architecture
+
+Enterprise analytics platforms degrade quickly when reporting logic is built on ad-hoc tables. YottaFlex AI models workforce, operational, and governance workflows cleanly across a **17-table normalized schema** implemented in SQLAlchemy 2.0:
+
+- Clear foreign-key relationships and referential integrity constraints across operational entities.
+- Separation of core organizational entities, analytics dimensions, audit metadata, and authorization mappings.
+- Predictable query boundaries for modular FastAPI service layers without leaking raw ORM models directly to API consumers.
+
+## Granular Enterprise Security (RBAC)
+
+Authorization is enforced consistently at the service and route boundary through a dedicated Role-Based Access Control layer:
+
+- **7 Distinct User Roles** aligned with enterprise governance boundaries.
+- **18 Fine-Grained Permissions** gating read, write, administrative, and analytics capabilities.
+- Server-side dependency checks in FastAPI ensuring privileged operations are rejected before business logic executes.
+
+## Software Quality & 113-Test Verification Suite
+
+Reliability is treated as a first-class architectural requirement rather than an afterthought:
+
+- **113 Automated Unit and Integration Tests** built with Pytest covering schema constraints, RBAC enforcement across roles/permissions, API endpoints, and core service logic.
+- **100% Pass Rate** across the documented test suite, supporting confident refactoring and containerized Docker builds.

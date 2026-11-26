@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.surface-card {
+  transition:
+    border-color var(--transition-micro-medium, 180ms ease),
+    transform var(--transition-micro-medium, 180ms ease),
+    background-color var(--transition-micro-medium, 180ms ease);
+}
+
+.surface-card:hover {
+  border-color: var(--brand-alpha-medium);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .touch-target {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand-solid-strong);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 16px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--brand-solid-strong);
+  color: var(--brand-on-solid-strong);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}

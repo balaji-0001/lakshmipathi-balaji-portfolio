@@ -1,0 +1,32 @@
+export {
+  person,
+  navigation,
+  social,
+  newsletter,
+  resume,
+  experiences,
+  skillCategories,
+  education,
+  certifications,
+  contact,
+  home,
+  about,
+  blog,
+  work,
+  gallery,
+} from "./content";
+
+export {
+  display,
+  newsletterForm,
+  routes,
+  protectedRoutes,
+  baseURL,
+  fonts,
+  style,
+  schema,
+  sameAs,
+  socialSharing,
+  effects,
+  dataStyle,
+} from "./once-ui.config";
